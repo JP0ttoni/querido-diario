@@ -1,11 +1,11 @@
 from datetime import date
 
-from gazette.spiders.base.base_RG_sites import Base_RgSites
+from gazette.spiders.base.rgsites import BaseRgSites
 
 
-class UFMunicipioSpider(Base_RgSites):
+class UFMunicipioSpider(BaseRgSites):
     name = "mg_esmeraldas"
     TERRITORY_ID = "3124104"
     allowed_domains = ["www.esmeraldas.mg.gov.br"]
-    start_urls = ["https://www.esmeraldas.mg.gov.br/diario-oficial-eletronico"]
+    BASE_URL = "https://www.esmeraldas.mg.gov.br/diario-oficial-eletronico"
     start_date = date(2021, 6, 12)
