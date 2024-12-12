@@ -12,7 +12,6 @@ class BaseRgSites(BaseGazetteSpider):
         yield scrapy.Request(self.BASE_URL)
 
     def parse(self, response):
-        self.end_date
         years = response.css('div[role="tabpanel"]')
         years.reverse()
         for year in years:
